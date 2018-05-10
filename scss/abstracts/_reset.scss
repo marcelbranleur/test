@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+	
+}
+
+@font-face {
+    font-family: 'zefani_stencil';
+    src: url('/fonts/zefanistenciluppercase-regular-webfont.woff2') format('woff2'),
+         url('/fonts/zefanistenciluppercase-regular-webfont.woff') format('woff'),
+         url('/fonts/zefanistenciluppercase-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Cormorant', serif; 
+    font-weight: 400;
+    font-size: 62.5%; // 1rem = 10px
+    line-height: 1.7;
+    background-color: #fff;
+    // color: #000;
+
+    @include respond-to(phone) {
+        font-size: 40%;
+    }
+
+    @include respond-to(tab-port) {
+        font-size: 45%;
+    }
+
+    @include respond-to(tab-land) {
+        font-size: 50%;
+    }
+
+    @include respond-to(big-desktop) {
+        font-size: 62.5%;
+    }
+    
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: '';
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.container {
+    max-width: 1440px;
+}
+ 
+// ::selection {
+//     background: $main-color;
+// }
